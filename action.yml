@@ -1,0 +1,19 @@
+name: "gh-pages-deploy"
+description: "create github pages deployment"
+author: "qijizh"
+inputs:
+  repo:
+    required: false
+    description: ""
+    default: ${{github.repository}}
+  token:
+    required: false
+    description: "github token"
+    default: ${{github.token}}
+  dir:
+    required: false
+    description: "deploy dir"
+    default: "./"
+runs:
+  using: "node16"
+  main: "dist/index.js"
